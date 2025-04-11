@@ -98,6 +98,7 @@ defmodule FinancierWeb do
       import Phoenix.HTML
       # Core UI components
       import FinancierWeb.CoreComponents
+      import FinancierWeb.Navbar.Navbar
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
