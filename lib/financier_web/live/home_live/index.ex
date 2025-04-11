@@ -1,5 +1,5 @@
 defmodule FinancierWeb.HomeLive.Index do
-    use FinancierWeb, :live_view
+    use FinancierWeb, :main_live_view
 
     @impl true
     def mount(_params, _session, socket) do
@@ -9,7 +9,7 @@ defmodule FinancierWeb.HomeLive.Index do
     @impl true
     def render(assigns) do
         ~H"""
-            <h1>Hello World</h1>
+
         """
     end
 end
