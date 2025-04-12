@@ -9,7 +9,7 @@ defmodule FinancierWeb.HomeLive.Index do
     @impl true
     def render(assigns) do
         ~H"""
-
+            <h1>Hello Home</h1>
         """
     end
 end
