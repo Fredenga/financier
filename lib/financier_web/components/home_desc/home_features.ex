@@ -6,7 +6,7 @@ defmodule FinancierWeb.HomeDesc.HomeFeatures do
     assigns = assign(assigns, :items, items)
     ~H"""
       <div class="w-1/2 p-8">
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div :for={item <- @items} >
             <div class="flex items-center space-x-3">
               <img class="w-8 h-8" src={"/images/home_desc/#{item["icon"]}"} alt="logo-svg" />
