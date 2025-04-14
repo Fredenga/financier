@@ -5,7 +5,7 @@ defmodule FinancierWeb.Navbar.Navbar do
     links = ["Home", "About", "Features", "Pricing"]
     assigns = assign(assigns, links: links)
     ~H"""
-    <nav class="flex py-6 items-center w-screen fixed top-0 z-50">
+    <nav class="flex py-6 items-center w-screen fixed top-0 z-50 bg-white">
       <div class="w-1/3 text-center">
         <h1 class="text-2xl text-bold">Financier</h1>
       </div>

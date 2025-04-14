@@ -18,9 +18,9 @@ defmodule FinancierWeb.Hero.HeroText do
         </div>
         <div class="flex items-center space-x-3 mt-10 pl-4">
             <div class="flex ">
-              <img class="h-12 w-12 object-contain -ml-2 z-10" src="/images/img1.svg" alt="avatar" />
-              <img class="h-12 w-12 object-contain -ml-2 z-20" src="/images/img2.svg" alt="avatar" />
-              <img class="h-12 w-12 object-contain -ml-2 z-30" src="/images/img3.svg" alt="avatar" />
+              <img class="h-12 w-12 object-contain -ml-2 z-10" src="/images/hero/img1.svg" alt="avatar" />
+              <img class="h-12 w-12 object-contain -ml-2 z-20" src="/images/hero/img2.svg" alt="avatar" />
+              <img class="h-12 w-12 object-contain -ml-2 z-30" src="/images/hero/img3.svg" alt="avatar" />
             </div>
             <p class="text-md text-gray-500">Trusted by +20K People.</p>
         </div>
