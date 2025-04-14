@@ -13,6 +13,8 @@ defmodule FinancierWeb.HomeLive.Index do
             <.hero />
             <p class="text-lg text-gray-500 text-center mt-10">Trusted by the world’s leading company</p>
             <%!-- Implement swiper element here --%>
+
+            <.home_desc/>
         </main>
         """
     end
