@@ -6,6 +6,10 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
       <div class="px-24 mt-10 w-screen">
         <.pay_header />
         <.pay_body />
+        <div class="mt-10 flex flex-col md:flex-row items-center w-full">
+          <.expand_business />
+          <.tx />
+        </div>
       </div>
     """
   end
@@ -16,6 +20,31 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
       <h1 class="text-5xl leading-normal font-[600] text-center">Pay Globally to Expand <br/> Your Business</h1>
       <p class="text-md text-gray-500 mt-5 text-center">Track your expenses automatically, set budgets, and achieve financial goals <br /> with AI-powered insights.</p>
     </div>
+    """
+  end
+
+  defp expand_business(assigns) do
+    ~H"""
+        <div class="w-1/2">
+          <h1 class="text-5xl leading-normal font-[600]">Pay Globally to Expand <br/> Your Business</h1>
+          <p class="text-md font-semibold text-gray-500 mt-5">Track your expenses automatically, set budgets, and achieve financial goals with AI-powered insights.<br /> with AI-powered insights.</p>
+          <h2 class="text-lg font-[500] my-5">Empowering Seamless Digital Payments</h2>
+          <p class="text-md text-gray-500 mt-5">Managing your expenses has never been easier! With Smart Expense Tracking, you can automatically monitor your spending.</p>
+          <h2 class="text-lg font-[500] my-5">Manually Enter Cash Expenses</h2>
+          <p class="text-md font-semibold text-gray-500 mt-5">Set alerts for budget limits, scan receipts with OCR technology, and add custom notes to keep everything organized.</p>
+          <button class="flex mt-6 space-x-3 bg-blue-500 text-white px-4 py-2 rounded-full">
+            <p class="text-xl">Try for Free</p>
+            <i class="fas fa-arrow-right text-blue-500 bg-white text-3xl p-2 rounded-full"></i>
+          </button>
+        </div>
+    """
+  end
+
+  defp tx(assigns) do
+    ~H"""
+      <div class="w-1/2">
+        <img src="/images/pay_globally/tx_img.jpg" alt="" class="w-full h-[60vh] object-contain" />
+      </div>
     """
   end
 
