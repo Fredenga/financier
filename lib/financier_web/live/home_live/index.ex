@@ -15,6 +15,7 @@ defmodule FinancierWeb.HomeLive.Index do
             <%!-- Implement swiper element here --%>
 
             <.home_desc/>
+            <.pay_globally/>
         </main>
         """
     end
