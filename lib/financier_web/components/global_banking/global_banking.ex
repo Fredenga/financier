@@ -3,7 +3,7 @@ defmodule FinancierWeb.GlobalBanking.GlobalBanking do
 
   def global_banking(assigns) do
     ~H"""
-      <div class="px-24 mt-10">
+      <div class="px-24 mt-10 flex flex-col items-center space-y-5">
         <.global_header />
         <.global_stats />
       </div>
@@ -23,15 +23,15 @@ defmodule FinancierWeb.GlobalBanking.GlobalBanking do
     items = items()
     assigns = assign(assigns, :items, items)
     ~H"""
-      <div>
-        <div>
-        <h2 class="text-2xl font-[400]"> HH </h2>
-          <p class="text-md text-gray-500">
-            HH2
-          </p>
-          <%!-- <img src={"images/pay_globally/#{item["src"]}"} alt="pay" class="" /> --%>
-        </div>
-      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:mt-10 md:mt-20">
+        <%= for item <- @items do %>
+          <div class="space-y-3">
+            <h2 class="text-2xl font-medium"><%= item["title"] %></h2>
+            <p class="text-md text-gray-500"><%= item["text"] %></p>
+            <img src={"images/global_banking/#{item["src"]}"} alt="pay" class="w-full h-[60vh] object-contain" />
+          </div>
+        <% end %>
+    </div>
     """
   end
 
