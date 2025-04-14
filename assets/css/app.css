@@ -3,3 +3,7 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+.hero-background {
+    background: #ffedf8;
+    background: linear-gradient(90deg,rgba(255, 237, 248, 1) 0%, rgba(255, 214, 252, 1) 50%, rgba(255, 227, 245, 1) 100%);
+}

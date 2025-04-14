@@ -3,8 +3,9 @@ defmodule FinancierWeb.Footer.Footer do
 
     def main_footer(assigns) do
         ~H"""
-            <footer class="bg-black text-white w-screen fixed bottom-0">
-                <div class="flex w-full py-20">
+        <%!-- fixed bottom-0 --%>
+            <footer class="bg-black text-white w-screen">
+                <div class="flex w-full py-10">
                     <.news_letter/>
                     <.pages/>
                 </div>
