@@ -101,6 +101,7 @@ defmodule FinancierWeb do
       import FinancierWeb.Navbar.Navbar
       import FinancierWeb.Footer.Footer
       import FinancierWeb.Hero.Hero
+      import FinancierWeb.HomeDesc.HomeDesc
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
