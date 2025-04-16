@@ -24,17 +24,23 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
     items = items()
     assigns = assign(assigns, :items, items)
     ~H"""
-        <div class="flex flex-col md:flex-row space-x-8 md:justify-center mt-20">
-          <div class={"space-y-5 #{item.bg} #{item.text} p-5 w-[40%] rounded-xl h-[65vh]"} :for={item <- @items} >
+        <div class="flex flex-col md:flex-row space-x-8 items-center md:justify-center mt-20">
+          <div class={"space-y-5 #{item.bg} #{item.text} p-5 w-[35%] rounded-xl h-[60vh]"} :for={item <- @items} >
             <h2 class="text-2xl font-semibold"><%= item.title %></h2>
             <h3 class="text-xl max-w-xl"><%= item.desc %></h3>
             <p class="text-xl font-semibold"><%= item.price %></p>
             <div class="space-y-2">
-              <div class="space-x-2" :for={feature <- item.features}>
-                <i class="fas fa-angle-right text-lg rounded-full bg-white text-black" aria-hidden="true"></i>
+              <div class="space-x-2 flex" :for={feature <- item.features}>
+                <div class="rounded-full p-1 bg-white">
+                  <i class="fas fa-angle-right text-md text-black" aria-hidden="true"></i>
+                </div>
                 <span class="text-lg"><%= feature %></span>
               </div>
             </div>
+            <button class={"flex items-center justify-center mt-6 space-x-3 #{item.bt} px-4 py-2 w-full rounded-full"}>
+              <p class="text-xl">Get Started</p>
+              <i class={"fas fa-arrow-right #{item.arrow} text-3xl p-2 rounded-full"}></i>
+          </button>
           </div>
         </div>
     """
@@ -48,6 +54,8 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
         price: "$500/month",
         bg: "bg-blue-500",
         text: "text-white",
+        bt: "bg-white text-blue-500",
+        arrow: "bg-blue-500 text-white",
         features: [
           "Track expenses & categorize spending",
           "Set monthly budgets & savings goals",
@@ -63,6 +71,8 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
         price: "$900/month",
         bg: "bg-gray-100",
         text: "text-black",
+        bt: "bg-black text-white",
+        arrow: "bg-white text-black",
         features: [
           "AI-powered insights & smart budgeting",
           "Automatic bank & card syncing",
