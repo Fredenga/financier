@@ -24,11 +24,11 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
     items = items()
     assigns = assign(assigns, :items, items)
     ~H"""
-        <div class="flex flex-col md:flex-row space-x-5">
-          <div class="space-y-5 bg-blue-500 text-white p-4 w-1/2" :for={item <- @items} >
-            <h2 class="text-2xl"><%= item.title %></h2>
+        <div class="flex flex-col md:flex-row space-x-8 md:justify-center mt-20">
+          <div class={"space-y-5 #{item.bg} #{item.text} p-5 w-[40%] rounded-xl h-[65vh]"} :for={item <- @items} >
+            <h2 class="text-2xl font-semibold"><%= item.title %></h2>
             <h3 class="text-xl max-w-xl"><%= item.desc %></h3>
-            <p class="text-xl"><%= item.price %></p>
+            <p class="text-xl font-semibold"><%= item.price %></p>
             <div class="space-y-2">
               <div class="space-x-2" :for={feature <- item.features}>
                 <i class="fas fa-angle-right text-lg rounded-full bg-white text-black" aria-hidden="true"></i>
@@ -46,6 +46,8 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
         title: "Premium Plan",
         desc: "Get started with essential features for smarter money management.",
         price: "$500/month",
+        bg: "bg-blue-500",
+        text: "text-white",
         features: [
           "Track expenses & categorize spending",
           "Set monthly budgets & savings goals",
@@ -59,6 +61,8 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
         title: "Business Plan",
         desc: "Unlock advanced features for deeper financial control & automation.",
         price: "$900/month",
+        bg: "bg-gray-100",
+        text: "text-black",
         features: [
           "AI-powered insights & smart budgeting",
           "Automatic bank & card syncing",
