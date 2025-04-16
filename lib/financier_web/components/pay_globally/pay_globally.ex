@@ -3,10 +3,10 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
 
   def pay_globally(assigns) do
     ~H"""
-      <div class="px-24 mt-10 w-screen">
+      <div class="px-24 mt-20 w-screen">
         <.pay_header />
         <.pay_body />
-        <div class="mt-10 flex flex-col md:flex-row items-center w-full">
+        <div class="mt-24 flex flex-col md:flex-row items-center w-full">
           <.expand_business />
           <.tx />
         </div>
@@ -16,9 +16,9 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
 
   defp pay_header(assigns) do
     ~H"""
-    <div class="flex flex-col items-center justify-center w-full">
-      <h1 class="text-5xl leading-normal font-[600] text-center">Pay Globally to Expand <br/> Your Business</h1>
-      <p class="text-md text-gray-500 mt-5 text-center">Track your expenses automatically, set budgets, and achieve financial goals <br /> with AI-powered insights.</p>
+    <div class="flex flex-col items-center justify-center w-full mt-20">
+      <h1 class="text-5xl leading-normal font-[600] text-center max-w-xl">Pay Globally to Expand Your Business</h1>
+      <p class="text-md text-gray-500 mt-5 text-center max-w-xl">Track your expenses automatically, set budgets, and achieve financial goals with AI-powered insights.</p>
     </div>
     """
   end
@@ -26,12 +26,12 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
   defp expand_business(assigns) do
     ~H"""
         <div class="w-1/2">
-          <h1 class="text-5xl leading-normal font-[600]">Pay Globally to Expand <br/> Your Business</h1>
-          <p class="text-md font-semibold text-gray-500 mt-5">Track your expenses automatically, set budgets, and achieve financial goals with AI-powered insights.<br /> with AI-powered insights.</p>
+          <h1 class="text-5xl leading-normal font-[600] max-w-xl">Pay Globally to Expand Your Business</h1>
+          <p class="text-md font-semibold text-gray-500 mt-5 max-w-xl">Track your expenses automatically, set budgets, and achieve financial goals with AI-powered insights with AI-powered insights.</p>
           <h2 class="text-lg font-[500] my-5">Empowering Seamless Digital Payments</h2>
           <p class="text-md text-gray-500 mt-5">Managing your expenses has never been easier! With Smart Expense Tracking, you can automatically monitor your spending.</p>
           <h2 class="text-lg font-[500] my-5">Manually Enter Cash Expenses</h2>
-          <p class="text-md font-semibold text-gray-500 mt-5">Set alerts for budget limits, scan receipts with OCR technology, and add custom notes to keep everything organized.</p>
+          <p class="text-md font-[500] text-gray-500 mt-5">Set alerts for budget limits, scan receipts with OCR technology, and add custom notes to keep everything organized.</p>
           <button class="flex mt-6 space-x-3 bg-blue-500 text-white px-4 py-2 rounded-full">
             <p class="text-xl">Try for Free</p>
             <i class="fas fa-arrow-right text-blue-500 bg-white text-3xl p-2 rounded-full"></i>
