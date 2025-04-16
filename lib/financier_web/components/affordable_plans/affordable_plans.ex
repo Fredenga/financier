@@ -19,25 +19,54 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
         </div>
     """
   end
-  def affordable_plans_cards(assigns) do
+
+  defp affordable_plans_cards(assigns) do
+    items = items()
+    assigns = assign(assigns, :items, items)
     ~H"""
-        <div class="">
-          <div class="space-y-5">
-            <h2 class="text-2xl">Premium Plan</h2>
-            <h3 class="text-xl max-w-xl">Get started with essential features for smarter money management.</h3>
-            <p class="text-xl">$500/month</p>
-            <div>
-              <div class="space-x-2">
-                <i class="fas fa-angle-right bg-white text-black" aria-hidden="true"></i>
-                <span class="">Track expenses & categorize spending</span>
-              </div>
-              <div>
-                <i class="fas fa-angle-right" aria-hidden="true"></i>
-                <span>Set monthly budgets & savings goals</span>
+        <div class="flex flex-col md:flex-row space-x-5">
+          <div class="space-y-5 bg-blue-500 text-white p-4 w-1/2" :for={item <- @items} >
+            <h2 class="text-2xl"><%= item.title %></h2>
+            <h3 class="text-xl max-w-xl"><%= item.desc %></h3>
+            <p class="text-xl"><%= item.price %></p>
+            <div class="space-y-2">
+              <div class="space-x-2" :for={feature <- item.features}>
+                <i class="fas fa-angle-right text-lg rounded-full bg-white text-black" aria-hidden="true"></i>
+                <span class="text-lg"><%= feature %></span>
               </div>
             </div>
           </div>
         </div>
     """
+  end
+
+  defp items do
+    [
+      %{
+        title: "Premium Plan",
+        desc: "Get started with essential features for smarter money management.",
+        price: "$500/month",
+        features: [
+          "Track expenses & categorize spending",
+          "Set monthly budgets & savings goals",
+          "Bank-level security & data encryption",
+          "Manual expense entry & receipt scanning",
+          "Basic financial reports & insights
+"
+        ]
+      },
+      %{
+        title: "Business Plan",
+        desc: "Unlock advanced features for deeper financial control & automation.",
+        price: "$900/month",
+        features: [
+          "AI-powered insights & smart budgeting",
+          "Automatic bank & card syncing",
+          "Custom spending categories & unlimited",
+          "Advanced reports & analytics",
+          "Multi-device access & cloud backup"
+        ]
+      }
+    ]
   end
 end
