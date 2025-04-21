@@ -5,10 +5,9 @@ defmodule FinancierWeb.HomeDesc.HomeDesc do
 
   def home_desc(assigns) do
     ~H"""
-      <div class="md:px-24 mt-10 flex flex-col md:flex-row items-center ">
-          <.home_exp />
-          <.home_features />
-      </div>
+    <div class="md:px-24 mt-10 flex flex-col md:flex-row items-center ">
+      <.home_exp /> <.home_features />
+    </div>
     """
   end
 end

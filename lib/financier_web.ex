@@ -64,7 +64,7 @@ defmodule FinancierWeb do
       use Phoenix.LiveView,
         layout: {FinancierWeb.Layouts, :main}
 
-        unquote(html_helpers())
+      unquote(html_helpers())
     end
   end
 
@@ -106,6 +106,7 @@ defmodule FinancierWeb do
       import FinancierWeb.GlobalBanking.GlobalBanking
       import FinancierWeb.AffordablePlans.AffordablePlans
       import FinancierWeb.BlogsSection.BlogsSection
+      import FinancierWeb.FaqsSection.FaqsSection
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
