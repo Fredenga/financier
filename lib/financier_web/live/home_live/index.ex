@@ -12,8 +12,14 @@ defmodule FinancierWeb.HomeLive.Index do
     <main class="mt-10 pt-[60px] pb-[80px]">
       <.hero />
       <p class="text-lg text-gray-500 text-center mt-10">Trusted by the world’s leading company</p>
-      <%!-- Implement swiper element here --%> <.home_desc /> <.pay_globally /> <.global_banking />
-      <.affordable_plans /> <.blogs_section /> <.faqs_section />
+      <%!-- Implement swiper element here --%>
+      <.home_desc />
+      <.pay_globally />
+      <.global_banking />
+      <.affordable_plans />
+      <.blogs_section />
+      <.faqs_section />
+      <.user_views />
     </main>
     """
   end
