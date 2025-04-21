@@ -5,10 +5,9 @@ defmodule FinancierWeb.Hero.Hero do
 
   def hero(assigns) do
     ~H"""
-      <div class="w-screen md:px-10 lg:px-24 pt-8 flex flex-col md:flex-row items-center md:items-start hero-background">
-        <.hero_text />
-        <.hero_img />
-      </div>
+    <div class="w-screen md:px-10 lg:px-24 pt-8 flex flex-col md:flex-row items-center md:items-start hero-background">
+      <.hero_text /> <.hero_img />
+    </div>
     """
   end
 end

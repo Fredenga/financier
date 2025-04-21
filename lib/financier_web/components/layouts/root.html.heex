@@ -7,10 +7,11 @@
     <.live_title default="Financier" suffix=" · Financier">
       {assigns[:page_title]}
     </.live_title>
-    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
-     <script
+    
+    <script
       defer
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
@@ -18,7 +19,8 @@
     >
     </script>
   </head>
-    <body class="bg-white">
-      {@inner_content}
+  
+  <body class="bg-white">
+    {@inner_content}
   </body>
 </html>

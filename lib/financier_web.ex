@@ -64,7 +64,7 @@ defmodule FinancierWeb do
       use Phoenix.LiveView,
         layout: {FinancierWeb.Layouts, :main}
 
-        unquote(html_helpers())
+      unquote(html_helpers())
     end
   end
 
