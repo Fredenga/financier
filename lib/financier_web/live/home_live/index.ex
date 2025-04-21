@@ -20,6 +20,7 @@ defmodule FinancierWeb.HomeLive.Index do
       <.blogs_section />
       <.faqs_section />
       <.user_views />
+      <.stay_connected />
     </main>
     """
   end

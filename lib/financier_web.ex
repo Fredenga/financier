@@ -108,6 +108,7 @@ defmodule FinancierWeb do
       import FinancierWeb.BlogsSection.BlogsSection
       import FinancierWeb.FaqsSection.FaqsSection
       import FinancierWeb.UserViews.UserViews
+      import FinancierWeb.StayConnected.StayConnected
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
