@@ -3,9 +3,10 @@ defmodule FinancierWeb.BlogsSection.BlogsSection do
 
   def blogs_section(assigns) do
       ~H"""
-        <div class="px-24 mt-20">
+        <div class="px-24 mt-20 flex flex-col items-center">
             <.blogs_section_header />
             <.blogs_cards />
+            <.actions />
         </div>
       """
   end
@@ -29,7 +30,7 @@ defmodule FinancierWeb.BlogsSection.BlogsSection do
             <div class="space-y-4" :for={item <- @items}>
                 <img src={item.img} alt="blog-img" class="h-[50vh] object-contain rounded-xl" />
                 <div class="flex items-center justify-between w-full">
-                  <h2 class="text-lg text-white px-2 py-1 bg-blue-500 rounded-xl"><%= item.title %></h2>
+                  <h2 class="text-lg flex items-center justify-center text-white px-2 py-1/2 bg-blue-500 rounded-xl"><%= item.title %></h2>
                   <h2 class="text-lg text-gray-500"><%= item.date %></h2>
                 </div>
                 <h1 class="text-xl font-semibold"><%= item.desc %></h1>
@@ -42,6 +43,15 @@ defmodule FinancierWeb.BlogsSection.BlogsSection do
                 </div>
             </div>
         </div>
+    """
+  end
+
+  defp actions(assigns) do
+    ~H"""
+      <button class="flex mt-10 space-x-3 bg-blue-500 text-white px-4 py-2 rounded-full ">
+            <p class="text-xl">Read More Blogs</p>
+            <i class="fas fa-arrow-right text-blue-500 bg-white text-3xl p-2 rounded-full"></i>
+      </button>
     """
   end
 
