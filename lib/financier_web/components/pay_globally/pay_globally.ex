@@ -18,7 +18,7 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
       <h1 class="text-5xl leading-normal font-[600] text-center max-w-xl">
         Pay Globally to Expand Your Business
       </h1>
-      
+
       <p class="text-md text-gray-500 mt-5 text-center max-w-xl">
         Track your expenses automatically, set budgets, and achieve financial goals with AI-powered insights.
       </p>
@@ -32,26 +32,26 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
       <h1 class="text-5xl leading-normal font-[600] max-w-xl">
         Pay Globally to Expand Your Business
       </h1>
-      
+
       <p class="text-md font-semibold text-gray-500 mt-5 max-w-xl">
         Track your expenses automatically, set budgets, and achieve financial goals with AI-powered insights with AI-powered insights.
       </p>
-      
+
       <h2 class="text-lg font-[500] my-5">Empowering Seamless Digital Payments</h2>
-      
+
       <p class="text-md text-gray-500 mt-5">
         Managing your expenses has never been easier! With Smart Expense Tracking, you can automatically monitor your spending.
       </p>
-      
+
       <h2 class="text-lg font-[500] my-5">Manually Enter Cash Expenses</h2>
-      
+
       <p class="text-md font-[500] text-gray-500 mt-5">
         Set alerts for budget limits, scan receipts with OCR technology, and add custom notes to keep everything organized.
       </p>
-      
+
       <button class="flex mt-6 space-x-3 bg-blue-500 text-white px-4 py-2 rounded-full">
         <p class="text-xl">Try for Free</p>
-         <i class="fas fa-arrow-right text-blue-500 bg-white text-3xl p-2 rounded-full"></i>
+        <i class="fas fa-arrow-right text-blue-500 bg-white text-3xl p-2 rounded-full"></i>
       </button>
     </div>
     """
@@ -73,11 +73,11 @@ defmodule FinancierWeb.PayGlobally.PayGlobally do
     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
       <div :for={item <- @items} class="space-y-3">
         <h2 class="text-2xl font-[400]">{item["title"]}</h2>
-        
+
         <p class="text-md text-gray-500">
           {item["text"]}
         </p>
-         <img src={"images/pay_globally/#{item["src"]}"} alt="pay" class="" />
+        <img src={"images/pay_globally/#{item["src"]}"} alt="pay" class="" />
       </div>
     </div>
     """
