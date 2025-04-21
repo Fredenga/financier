@@ -31,7 +31,7 @@ defmodule FinancierWeb.FaqsSection.FaqsAndAnswers do
         <h1>What is this app and how does it work?</h1>
         <%= if @clicked do %>
           <i class="fa fa-chevron-up" aria-hidden="true"></i>
-          <% else %>
+        <% else %>
           <i class="fa fa-chevron-down" aria-hidden="true"></i>
         <% end %>
       </div>
@@ -39,11 +39,11 @@ defmodule FinancierWeb.FaqsSection.FaqsAndAnswers do
       "transition-all duration-500 ease-in-out overflow-hidden " <>
         if @clicked, do: "max-h-96 opacity-100 py-10", else: "max-h-0 opacity-0 py-0"
       }>
-          <p class="max-w-xl">
-            Our app is a smart finance management tool that helps you track expenses,
-            set budgets, and gain AI-powered financial insights. Connect your bank accounts,
-            categorize spending, and achieve your savings goals effortlessly.
-          </p>
+        <p class="max-w-xl">
+          Our app is a smart finance management tool that helps you track expenses,
+          set budgets, and gain AI-powered financial insights. Connect your bank accounts,
+          categorize spending, and achieve your savings goals effortlessly.
+        </p>
       </div>
     </div>
     """
