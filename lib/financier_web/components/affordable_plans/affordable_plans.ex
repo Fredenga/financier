@@ -9,7 +9,7 @@ defmodule FinancierWeb.AffordablePlans.AffordablePlans do
         </div>
     """
   end
-  def affordable_plans_header(assigns) do
+  defp affordable_plans_header(assigns) do
     ~H"""
         <div class="">
           <div class="flex flex-col items-center justify-center w-full">
