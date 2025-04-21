@@ -1,17 +1,21 @@
 defmodule FinancierWeb.FaqsSection.FaqsSection do
   use Phoenix.Component
+  import FinancierWeb.FaqsSection.Answers
 
   def faqs_section(assigns) do
+    items = items()
+    assigns = assign(assigns, :items, items)
     ~H"""
     <div class="px-24 mt-20 flex flex-col items-center">
-      <.faqs_header /> <.live_component module={FinancierWeb.FaqsSection.FaqsAndAnswers} id="1" />
+      <.faqs_header />
+      <.live_component module={FinancierWeb.FaqsSection.FaqsAndAnswers} :for={item <- @items} item={item} id={item.id} />
     </div>
     """
   end
 
   defp faqs_header(assigns) do
     ~H"""
-    <div class="">
+    <div class="mb-20">
       <div class="flex flex-col items-center justify-center w-full">
         <h1 class="text-5xl leading-normal font-[600] text-center max-w-xl">
           Explore Our FAQs & Start Saving Smarter
