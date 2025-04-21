@@ -18,6 +18,7 @@ defmodule FinancierWeb.HomeLive.Index do
             <.pay_globally/>
             <.global_banking/>
             <.affordable_plans/>
+            <.blogs_section/>
         </main>
         """
     end
