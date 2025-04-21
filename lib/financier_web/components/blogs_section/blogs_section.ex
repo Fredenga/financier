@@ -22,35 +22,37 @@ defmodule FinancierWeb.BlogsSection.BlogsSection do
   end
 
   defp blogs_cards(assigns) do
+    items = items()
+    assigns = assign(assigns, :items, items)
     ~H"""
-        <div class="flex mt-16">
-            <div class="space-y-4">
-                <img src="/images/blogs/blog1.jpg" alt="blog-img" class="h-[50vh] object-contain" />
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="space-y-4" :for={item <- @items}>
+                <img src={item.img} alt="blog-img" class="h-[50vh] object-contain rounded-xl" />
                 <div class="flex items-center justify-between w-full">
-                  <h2 class="text-lg text-white px-2 py-1 bg-blue-500 rounded-xl">Finance</h2>
-                  <h2 class="text-lg text-gray-500">February 19, 2025</h2>
+                  <h2 class="text-lg text-white px-2 py-1 bg-blue-500 rounded-xl"><%= item.title %></h2>
+                  <h2 class="text-lg text-gray-500"><%= item.date %></h2>
                 </div>
-                <h1 class="text-xl font-semibold">10 Proven Ways to Save More Money Every Month</h1>
+                <h1 class="text-xl font-semibold"><%= item.desc %></h1>
                 <div class="flex items-center justify-between w-full">
                   <div class="flex items-center space-x-3">
-                    <img src="/images/blogs/avatar1.svg" alt="avatar-img" class="h-8 w-8 object-contain" />
-                    <p>Elliot Haven</p>
+                    <img src={item.avatar} alt="avatar-img" class="h-8 w-8 object-contain" />
+                    <p><%= item.author %></p>
                   </div>
-                  <p class="text-md text-gray-500">8 Minutes read</p>
+                  <p class="text-md text-gray-500"><%= item.duration %></p>
                 </div>
             </div>
         </div>
     """
   end
 
-  defp cards do
+  defp items do
     [
       %{
         img: "/images/blogs/blog1.jpg",
         title: "Finance",
         desc: "10 Proven Ways to Save More Money Every Month",
         date: "February 19, 2025",
-        avatar: "/images/blogs/avatar1.jpg",
+        avatar: "/images/blogs/avatar1.svg",
         author: "Elliot Haven",
         duration: "8 Minutes read"
       },
@@ -59,7 +61,7 @@ defmodule FinancierWeb.BlogsSection.BlogsSection do
         title: "Investing",
         desc: "The Ultimate Guide to Reducing Unnecessary Expenses",
         date: "February 19, 2025",
-        avatar: "/images/blogs/avatar1.jpg",
+        avatar: "/images/blogs/avatar1.svg",
         author: "Elliot Haven",
         duration: "8 Minutes read"
       },
@@ -68,7 +70,7 @@ defmodule FinancierWeb.BlogsSection.BlogsSection do
         title: "Saving",
         desc: "Drowning in Subscriptions? Tips to Track and Cancel Unused Services",
         date: "February 19, 2025",
-        avatar: "/images/blogs/avatar1.jpg",
+        avatar: "/images/blogs/avatar1.svg",
         author: "Elliot Haven",
         duration: "8 Minutes read"
       }
