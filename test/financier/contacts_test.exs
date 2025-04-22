@@ -8,7 +8,13 @@ defmodule Financier.ContactsTest do
 
     import Financier.ContactsFixtures
 
-    @invalid_attrs %{message: nil, first_name: nil, last_name: nil, phone: nil, email_address: nil}
+    @invalid_attrs %{
+      message: nil,
+      first_name: nil,
+      last_name: nil,
+      phone: nil,
+      email_address: nil
+    }
 
     test "list_contacts/0 returns all contacts" do
       contact = contact_fixture()
@@ -21,7 +27,13 @@ defmodule Financier.ContactsTest do
     end
 
     test "create_contact/1 with valid data creates a contact" do
-      valid_attrs = %{message: "some message", first_name: "some first_name", last_name: "some last_name", phone: "some phone", email_address: "some email_address"}
+      valid_attrs = %{
+        message: "some message",
+        first_name: "some first_name",
+        last_name: "some last_name",
+        phone: "some phone",
+        email_address: "some email_address"
+      }
 
       assert {:ok, %Contact{} = contact} = Contacts.create_contact(valid_attrs)
       assert contact.message == "some message"
@@ -37,7 +49,14 @@ defmodule Financier.ContactsTest do
 
     test "update_contact/2 with valid data updates the contact" do
       contact = contact_fixture()
-      update_attrs = %{message: "some updated message", first_name: "some updated first_name", last_name: "some updated last_name", phone: "some updated phone", email_address: "some updated email_address"}
+
+      update_attrs = %{
+        message: "some updated message",
+        first_name: "some updated first_name",
+        last_name: "some updated last_name",
+        phone: "some updated phone",
+        email_address: "some updated email_address"
+      }
 
       assert {:ok, %Contact{} = contact} = Contacts.update_contact(contact, update_attrs)
       assert contact.message == "some updated message"

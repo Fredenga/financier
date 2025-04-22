@@ -29,12 +29,14 @@ defmodule FinancierWeb.FaqsSection.FaqsAndAnswers do
         class="flex justify-between text-2xl cursor-pointer"
       >
         <h1>{@item.question}</h1>
+        
         <%= if @clicked do %>
           <i class="fa fa-chevron-up" aria-hidden="true"></i>
         <% else %>
           <i class="fa fa-chevron-down" aria-hidden="true"></i>
         <% end %>
       </div>
+      
       <div class={
       "transition-all duration-500 ease-in-out overflow-hidden " <>
         if @clicked, do: "max-h-96 opacity-100 pt-10", else: "max-h-0 opacity-0 py-0"
