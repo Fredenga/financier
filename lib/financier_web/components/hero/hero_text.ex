@@ -1,5 +1,6 @@
 defmodule FinancierWeb.Hero.HeroText do
   use Phoenix.Component
+  use FinancierWeb, :html
 
   def hero_text(assigns) do
     ~H"""
@@ -13,10 +14,12 @@ defmodule FinancierWeb.Hero.HeroText do
       </p>
 
       <div class="flex items-center w-full mt-10">
+      <.link patch={~p"/contact"}>
         <button class="flex  space-x-3 bg-blue-500 text-white px-4 py-2 rounded-full">
           <p class="text-xl">Try for Free</p>
-          <i class="fas fa-arrow-right text-blue-500 bg-white text-3xl p-2 rounded-full"></i>
+           <i class="fas fa-arrow-right text-blue-500 bg-white text-3xl p-2 rounded-full"></i>
         </button>
+      </.link>
 
         <button class="flex space-x-2 bg-transparent px-3 py-1 rounded-full">
           <i class="fas fa-arrow-right bg-blue-500 text-white text-3xl p-2 rounded-full"></i>

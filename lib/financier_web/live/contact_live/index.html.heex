@@ -1,0 +1,77 @@
+<div class="mt-10 md:mt-40 px-24 pt-[60px] pb-[80px]">
+  <div class="flex flex-col items-center justify-center w-full">
+    <h1 class="text-5xl leading-normal font-[600] text-center max-w-xl">
+      Get in Touch with Our Finance Experts
+    </h1>
+    
+    <p class="text-md text-gray-500 mt-5 text-center max-w-xl">
+      Automatically track your expenses, set budgets, and achieve your financial goals with AI-powered insights.
+    </p>
+  </div>
+  
+  <div class="flex flex-col md:flex-row mt-24">
+    <div class="w-1/2">
+      <img src="/images/contact/contact.jpg" alt="contact" class="w-[60vh] object-contain" />
+    </div>
+    
+    <div class="w-1/2">
+      <.simple_form
+        for={@form}
+        id="contact-form"
+        phx-change="validate_contact"
+        phx-submit="save_contact"
+        class="w-full max-w-lg mx-auto"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <.input
+            field={@form[:first_name]}
+            type="text"
+            label="First Name"
+            placeholder="Your First Name"
+            phx-debounce="300"
+            required
+          />
+          <.input
+            field={@form[:last_name]}
+            type="text"
+            label="Last Name"
+            placeholder="Your Last Name"
+            phx-debounce="300"
+            required
+          />
+          <.input
+            field={@form[:phone]}
+            type="text"
+            label="Phone Number"
+            placeholder="Your Phone Number"
+            phx-debounce="300"
+
+            required
+          />
+          <.input
+            field={@form[:email_address]}
+            type="email"
+            label="Email Address"
+            placeholder="Your Email Address"
+            phx-debounce="300"
+            required
+          />
+        </div>
+        
+        <div class="mt-4">
+          <.input
+            field={@form[:message]}
+            type="textarea"
+            label="Message"
+            placeholder="Your Message"
+            phx-debounce="300"
+            required
+          />
+        </div>
+        
+        <.button class="mt-4 bg-blue-600 rounded-xl md:rounded-full">Send Message</.button>
+      </.simple_form>
+    </div>
+  </div>
+  <.stay_connected />
+</div>
