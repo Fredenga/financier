@@ -17,5 +17,8 @@ defmodule Financier.Contacts.Contact do
     contact
     |> cast(attrs, [:first_name, :last_name, :phone, :email_address, :message])
     |> validate_required([:first_name, :last_name, :phone, :email_address, :message])
+    |> validate_format(:email_address, ~r/@/, message: "The email must contain an @")
+    |> unique_constraint(:ememail_address, message: "This email is already taken")
+    |> validate_length(:phone, min: 10, max: 15, message: "Phone number must be between 10 and 15 digits")
   end
 end
