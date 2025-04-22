@@ -1,5 +1,6 @@
 defmodule FinancierWeb.Navbar.Navbar do
   use Phoenix.Component
+  
 
   def main_nav(assigns) do
     links = ["Home", "About", "Features", "Pricing"]
@@ -10,7 +11,7 @@ defmodule FinancierWeb.Navbar.Navbar do
       <div class="w-1/3 text-center">
         <h1 class="text-2xl text-bold">Financier</h1>
       </div>
-      
+
       <div class="w-1/3">
         <ul class="flex justify-between text-xl">
           <li :for={link <- @links}>
@@ -18,7 +19,7 @@ defmodule FinancierWeb.Navbar.Navbar do
           </li>
         </ul>
       </div>
-      
+
       <div class="w-1/3 flex items-center justify-center space-x-5">
         <i class="fas fa-shopping-bag text-xl"></i>
         <button class="flex items-center justify-center space-x-3 bg-black text-white px-4 py-2 rounded-full">
