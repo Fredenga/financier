@@ -21,6 +21,7 @@ defmodule FinancierWeb.Router do
     pipe_through :browser
 
     live "/", HomeLive.Index, :index
+    live "/contact", ContactLive.Index, :index
   end
 
   # Other scopes may use custom stacks.
